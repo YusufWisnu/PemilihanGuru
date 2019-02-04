@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65BE5894-4FA7-4A5E-9BB2-D54C7F426C77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PemilihanGuru</RootNamespace>
+    <AssemblyName>PemilihanGuru</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.6.6823.24527, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.6.6823.24527\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.1.1.0\lib\net45\FireSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp.Serialization.JsonNet, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.Serialization.JsonNet.1.1.0\lib\net45\FireSharp.Serialization.JsonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="blankUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="blankUC.Designer.cs">
+      <DependentUpon>blankUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bobot.cs" />
+    <Compile Include="counter.cs" />
+    <Compile Include="Criteria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Criteria.Designer.cs">
+      <DependentUpon>Criteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="DialogEditCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEditCriteria.Designer.cs">
+      <DependentUpon>DialogEditCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEditRanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEditRanking.Designer.cs">
+      <DependentUpon>DialogEditRanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEditUser.Designer.cs">
+      <DependentUpon>DialogEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu1.Designer.cs">
+      <DependentUpon>Menu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalSoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalSoal.Designer.cs">
+      <DependentUpon>ModalSoal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no1.Designer.cs">
+      <DependentUpon>no1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no10.Designer.cs">
+      <DependentUpon>no10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no11.Designer.cs">
+      <DependentUpon>no11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no12.Designer.cs">
+      <DependentUpon>no12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no13.Designer.cs">
+      <DependentUpon>no13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no14.Designer.cs">
+      <DependentUpon>no14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no15.Designer.cs">
+      <DependentUpon>no15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no2.Designer.cs">
+      <DependentUpon>no2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no3.Designer.cs">
+      <DependentUpon>no3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no4.Designer.cs">
+      <DependentUpon>no4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no5.Designer.cs">
+      <DependentUpon>no5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no6.Designer.cs">
+      <DependentUpon>no6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no7.Designer.cs">
+      <DependentUpon>no7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no8.Designer.cs">
+      <DependentUpon>no8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no9.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="no9.Designer.cs">
+      <DependentUpon>no9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penilaian.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RankCount.cs" />
+    <Compile Include="Ranked.cs" />
+    <Compile Include="ranking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ranking.Designer.cs">
+      <DependentUpon>ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Soal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Soal.Designer.cs">
+      <DependentUpon>Soal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Soal1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Soal1.Designer.cs">
+      <DependentUpon>Soal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoalSelesai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoalSelesai.Designer.cs">
+      <DependentUpon>SoalSelesai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl3.Designer.cs">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGuide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserGuide.Designer.cs">
+      <DependentUpon>UserGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaktuHabis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaktuHabis.Designer.cs">
+      <DependentUpon>WaktuHabis.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blankUC.resx">
+      <DependentUpon>blankUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Criteria.resx">
+      <DependentUpon>Criteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEditCriteria.resx">
+      <DependentUpon>DialogEditCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEditRanking.resx">
+      <DependentUpon>DialogEditRanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEditUser.resx">
+      <DependentUpon>DialogEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu1.resx">
+      <DependentUpon>Menu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalSoal.resx">
+      <DependentUpon>ModalSoal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no1.resx">
+      <DependentUpon>no1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no10.resx">
+      <DependentUpon>no10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no11.resx">
+      <DependentUpon>no11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no12.resx">
+      <DependentUpon>no12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no13.resx">
+      <DependentUpon>no13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no14.resx">
+      <DependentUpon>no14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no15.resx">
+      <DependentUpon>no15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no2.resx">
+      <DependentUpon>no2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no3.resx">
+      <DependentUpon>no3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no4.resx">
+      <DependentUpon>no4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no5.resx">
+      <DependentUpon>no5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no6.resx">
+      <DependentUpon>no6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no7.resx">
+      <DependentUpon>no7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no8.resx">
+      <DependentUpon>no8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no9.resx">
+      <DependentUpon>no9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ranking.resx">
+      <DependentUpon>ranking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Soal.resx">
+      <DependentUpon>Soal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Soal1.resx">
+      <DependentUpon>Soal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoalSelesai.resx">
+      <DependentUpon>SoalSelesai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl3.resx">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGuide.resx">
+      <DependentUpon>UserGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaktuHabis.resx">
+      <DependentUpon>WaktuHabis.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_remove_close_exit_trash-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-1633249_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_logout_59379.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_658669.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipment_car-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business_-_Outline-17-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asdadsdada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hhhhhhhhhhhh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ramadhan-06-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-button-shutdown-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sssssss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169_arrow_back_left-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo sistem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo sistem fix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconNew1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconNew2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconNew3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconNew4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_green-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
